@@ -7,6 +7,8 @@ class User(models.Model):
                                 primary_key=True)   # unique identifiers used as the primary key
     username = models.CharField('Name of user', max_length=255, null=True, blank=True)
     email = models.EmailField('Email', unique=True)
+    age = models.IntegerField('Age', null=True, blank=True)
+    nationality = models.CharField('Nationality', max_length=255, null=True, blank=True)
 
     class Meta:
         verbose_name = 'user'
